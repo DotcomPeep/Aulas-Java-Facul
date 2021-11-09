@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telas;
+package view;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,6 +11,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
+import persistence.Cliente;
+import persistence.ClienteDao;
 
 
 
@@ -346,37 +348,37 @@ public class TelaClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCpfFocusLost
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-         try {
-            // Conectar com o BD
-            Connection con;
-            PreparedStatement st;
-            
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/acesso", "root", "987543@#Leo");
-
-            st = con.prepareStatement("INSERT INTO cliente VALUES(?,?,?,?,?,?,?)");
-            st.setString(1, txtCpf.getText());
-            st.setString(2, txtNome.getText());
-            st.setString(3, txtEndereco.getText());
-            st.setString(4, txtBairro.getText());
-            st.setString(5, txtCidade.getText());
-            st.setString(6, txtTelefone.getText());
-            st.setDouble(7, Double.parseDouble(txtRenda.getText()));            
-            
-            st.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Dados cadastrados com sucesso");
-
-           Limpar();
-            
-       } catch (ClassNotFoundException ex) {
-            JOptionPane.showMessageDialog(null,"Erro ao tentar salvar os dados. Entre em contato com o administrador do sistema e informe o erro  " + ex.getMessage());
-        } catch (SQLException ex) {
-           if (ex.getErrorCode()==1062){
-             JOptionPane.showMessageDialog(null,"Este cliente já está cadastrado");
-             txtCpf.requestFocus();
-           }else{
-             JOptionPane.showMessageDialog(null,"Erro ao tentar salvar os dados. Entre em contato com o administrador do sistema e informe o erro  " + ex.getErrorCode());
-           }
+        //1)Pegar os dados do formulário e armazenar em um objeto da classe Cliente
+        //2)Conectar com o BD por meio do método conectar da classe clienteDao
+        //3)Salvar os dados por meio do método salvar da classe ClienteDao
+        boolean r;
+        ClienteDao cliDao;
+        Cliente cliente;
+        
+        //Carregar dados no formulário no objeto cliente
+        cliente = new Cliente();
+        cliente.setNome(txtNome.getText());
+        cliente.setCpf(txtCpf.getText());
+        cliente.setEndereco(txtEndereco.getText());
+        cliente.setBairro(txtBairro.getText());
+        cliente.setCidade(txtCidade.getText());
+        cliente.setTelefone(txtTelefone.getText());
+        cliente.setRenda(Double.parseDouble(txtRenda.getText()));
+        
+        //Conectar no BD
+        cliDao = new ClienteDao();
+        r = cliDao.conectar();
+        if(r == true) { //se conectou no BD
+            r = cliDao.salvar(cliente);
+            if(r == true) {
+                JOptionPane.showMessageDialog(null, "Cliente salvo com sucesso");
+                Limpar();
+            } else {
+                JOptionPane.showMessageDialog(null, "Erro ao tentar salvar");
+            }
+        } else {
+            //não conectou no BD
+            JOptionPane.showMessageDialog(null, "não conectou");
         }
 
     }//GEN-LAST:event_btnSalvarActionPerformed
