@@ -26,21 +26,30 @@ public class TelaCadastrados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         lblSelecEquip = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        lblAparMod = new javax.swing.JLabel();
+        cmbEquipamentoSelec = new javax.swing.JComboBox<>();
         lblModelo = new javax.swing.JLabel();
         lblData = new javax.swing.JLabel();
-        lblAparData = new javax.swing.JLabel();
         lblSerial = new javax.swing.JLabel();
-        lblAparSerial = new javax.swing.JLabel();
         lblFabricante = new javax.swing.JLabel();
-        lblAparFab = new javax.swing.JLabel();
         lblStatus = new javax.swing.JLabel();
-        lblAparStat = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnAlterar = new javax.swing.JButton();
         imgEquip = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        txtModelo = new javax.swing.JTextField();
+        txtSerial = new javax.swing.JTextField();
+        txtFabricante = new javax.swing.JTextField();
+        txtDataCadastro = new javax.swing.JTextField();
+        txtStatus = new javax.swing.JTextField();
+        btnSalvar = new javax.swing.JButton();
+        btnExcluir = new javax.swing.JButton();
+        btnLimpar = new javax.swing.JButton();
+        background = new javax.swing.JLabel();
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -51,17 +60,11 @@ public class TelaCadastrados extends javax.swing.JFrame {
         getContentPane().add(lblSelecEquip);
         lblSelecEquip.setBounds(12, 26, 141, 20);
 
-        jComboBox1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "monitores", "Gabinetes", "HD's", "Teclados", "Mouses" }));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(141, 20));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(165, 26, 141, 20);
-
-        lblAparMod.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        lblAparMod.setText("*aparecer o modelo aqui*");
-        lblAparMod.setPreferredSize(new java.awt.Dimension(141, 20));
-        getContentPane().add(lblAparMod);
-        lblAparMod.setBounds(165, 64, 141, 22);
+        cmbEquipamentoSelec.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        cmbEquipamentoSelec.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "monitores", "Gabinetes", "HD's", "Teclados", "Mouses" }));
+        cmbEquipamentoSelec.setPreferredSize(new java.awt.Dimension(141, 20));
+        getContentPane().add(cmbEquipamentoSelec);
+        cmbEquipamentoSelec.setBounds(165, 26, 141, 20);
 
         lblModelo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lblModelo.setText("modelo:");
@@ -75,23 +78,11 @@ public class TelaCadastrados extends javax.swing.JFrame {
         getContentPane().add(lblData);
         lblData.setBounds(12, 180, 141, 20);
 
-        lblAparData.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        lblAparData.setText("*Data aqui*");
-        lblAparData.setPreferredSize(new java.awt.Dimension(141, 20));
-        getContentPane().add(lblAparData);
-        lblAparData.setBounds(165, 180, 141, 20);
-
         lblSerial.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lblSerial.setText("Serial / Identificação:");
         lblSerial.setPreferredSize(new java.awt.Dimension(141, 20));
         getContentPane().add(lblSerial);
         lblSerial.setBounds(12, 104, 141, 20);
-
-        lblAparSerial.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        lblAparSerial.setText("*Serial*");
-        lblAparSerial.setPreferredSize(new java.awt.Dimension(141, 20));
-        getContentPane().add(lblAparSerial);
-        lblAparSerial.setBounds(165, 104, 141, 20);
 
         lblFabricante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lblFabricante.setText("Fabricante:");
@@ -99,29 +90,17 @@ public class TelaCadastrados extends javax.swing.JFrame {
         getContentPane().add(lblFabricante);
         lblFabricante.setBounds(12, 142, 141, 20);
 
-        lblAparFab.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        lblAparFab.setText("*Fabricante*");
-        lblAparFab.setPreferredSize(new java.awt.Dimension(141, 20));
-        getContentPane().add(lblAparFab);
-        lblAparFab.setBounds(165, 142, 141, 20);
-
         lblStatus.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lblStatus.setText("Status:");
         lblStatus.setPreferredSize(new java.awt.Dimension(141, 20));
         getContentPane().add(lblStatus);
         lblStatus.setBounds(12, 218, 141, 20);
 
-        lblAparStat.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        lblAparStat.setText("*Manutenção / Em uso*");
-        lblAparStat.setPreferredSize(new java.awt.Dimension(141, 20));
-        getContentPane().add(lblAparStat);
-        lblAparStat.setBounds(165, 218, 141, 20);
-
-        jButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton1.setText("Alterar dados");
-        jButton1.setPreferredSize(new java.awt.Dimension(169, 24));
-        getContentPane().add(jButton1);
-        jButton1.setBounds(407, 310, 169, 34);
+        btnAlterar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnAlterar.setText("Alterar dados");
+        btnAlterar.setPreferredSize(new java.awt.Dimension(169, 24));
+        getContentPane().add(btnAlterar);
+        btnAlterar.setBounds(432, 270, 120, 34);
 
         imgEquip.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         imgEquip.setText("*Foto do equipamento*");
@@ -129,11 +108,46 @@ public class TelaCadastrados extends javax.swing.JFrame {
         getContentPane().add(imgEquip);
         imgEquip.setBounds(407, 142, 141, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/aaa.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(-6, -5, 620, 380);
+        txtModelo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtModelo);
+        txtModelo.setBounds(165, 65, 140, 25);
 
-        setSize(new java.awt.Dimension(626, 409));
+        txtSerial.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtSerial);
+        txtSerial.setBounds(164, 104, 140, 25);
+
+        txtFabricante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtFabricante);
+        txtFabricante.setBounds(164, 142, 140, 25);
+
+        txtDataCadastro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtDataCadastro);
+        txtDataCadastro.setBounds(164, 180, 140, 25);
+
+        txtStatus.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtStatus);
+        txtStatus.setBounds(165, 218, 140, 25);
+
+        btnSalvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnSalvar.setText("Salvar");
+        getContentPane().add(btnSalvar);
+        btnSalvar.setBounds(12, 270, 120, 34);
+
+        btnExcluir.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnExcluir.setText("Excluir");
+        getContentPane().add(btnExcluir);
+        btnExcluir.setBounds(152, 270, 120, 34);
+
+        btnLimpar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnLimpar.setText("Limpar");
+        getContentPane().add(btnLimpar);
+        btnLimpar.setBounds(292, 270, 120, 34);
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/aaa.png"))); // NOI18N
+        getContentPane().add(background);
+        background.setBounds(0, 0, 620, 330);
+
+        setSize(new java.awt.Dimension(626, 362));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -173,20 +187,25 @@ public class TelaCadastrados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
+    private javax.swing.JButton btnAlterar;
+    private javax.swing.JButton btnExcluir;
+    private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnSalvar;
+    private javax.swing.JComboBox<String> cmbEquipamentoSelec;
     private javax.swing.JLabel imgEquip;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblAparData;
-    private javax.swing.JLabel lblAparFab;
-    private javax.swing.JLabel lblAparMod;
-    private javax.swing.JLabel lblAparSerial;
-    private javax.swing.JLabel lblAparStat;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblData;
     private javax.swing.JLabel lblFabricante;
     private javax.swing.JLabel lblModelo;
     private javax.swing.JLabel lblSelecEquip;
     private javax.swing.JLabel lblSerial;
     private javax.swing.JLabel lblStatus;
+    private javax.swing.JTextField txtDataCadastro;
+    private javax.swing.JTextField txtFabricante;
+    private javax.swing.JTextField txtModelo;
+    private javax.swing.JTextField txtSerial;
+    private javax.swing.JTextField txtStatus;
     // End of variables declaration//GEN-END:variables
 }

@@ -21,12 +21,13 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         lblSenha = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblLogoTipo = new javax.swing.JLabel();
         lblLogin = new javax.swing.JLabel();
         txtLogin = new javax.swing.JTextField();
         txtSenha = new javax.swing.JPasswordField();
         btnLogar = new javax.swing.JButton();
         btnSenha = new javax.swing.JButton();
+        btnCadastrar = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -40,10 +41,10 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().add(lblSenha);
         lblSenha.setBounds(72, 129, 140, 30);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
-        jLabel3.setText("AssetManager");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(270, 120, 150, 50);
+        lblLogoTipo.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        lblLogoTipo.setText("AssetManager");
+        getContentPane().add(lblLogoTipo);
+        lblLogoTipo.setBounds(270, 120, 150, 50);
 
         lblLogin.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lblLogin.setText("Login:");
@@ -92,6 +93,16 @@ public class TelaLogin extends javax.swing.JFrame {
         });
         getContentPane().add(btnSenha);
         btnSenha.setBounds(115, 223, 98, 30);
+
+        btnCadastrar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnCadastrar.setText("Cadastrar");
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCadastrar);
+        btnCadastrar.setBounds(338, 250, 100, 40);
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/aaa.png"))); // NOI18N
         getContentPane().add(Background);
@@ -151,6 +162,14 @@ public class TelaLogin extends javax.swing.JFrame {
         
     }//GEN-LAST:event_txtLoginKeyPressed
 
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        
+        CadastroUsuario tela;
+        tela = new CadastroUsuario();
+        tela.setVisible(true);
+        
+    }//GEN-LAST:event_btnCadastrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -189,11 +208,12 @@ public class TelaLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnLogar;
     private javax.swing.JButton btnSenha;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblLogin;
+    private javax.swing.JLabel lblLogoTipo;
     private javax.swing.JLabel lblSenha;
     private javax.swing.JTextField txtLogin;
     private javax.swing.JPasswordField txtSenha;

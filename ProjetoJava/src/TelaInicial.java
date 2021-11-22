@@ -31,20 +31,21 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         txtBemVindo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox9 = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        btnEquipCad = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        lblTipoEquipamento = new javax.swing.JLabel();
+        cmbTipoEquipamento = new javax.swing.JComboBox<>();
+        lblModelo = new javax.swing.JLabel();
+        lblSerial = new javax.swing.JLabel();
+        lblFabricante = new javax.swing.JLabel();
+        lblDataCadastro = new javax.swing.JLabel();
+        txtDataCadastro = new javax.swing.JTextField();
+        txtModelo = new javax.swing.JTextField();
+        txtSerial = new javax.swing.JTextField();
+        txtFabricante = new javax.swing.JTextField();
+        lblStatus = new javax.swing.JLabel();
+        btnCadastrarEquipamento = new javax.swing.JButton();
+        btnEquipamentoCadastrado = new javax.swing.JButton();
+        cmbStatus = new javax.swing.JComboBox<>();
+        btnLimpar = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -58,90 +59,95 @@ public class TelaInicial extends javax.swing.JFrame {
         getContentPane().add(txtBemVindo);
         txtBemVindo.setBounds(7, 5, 320, 14);
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel2.setText("Tipo de equipamento");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(35, 38, 130, 30);
+        lblTipoEquipamento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lblTipoEquipamento.setText("Tipo de equipamento");
+        getContentPane().add(lblTipoEquipamento);
+        lblTipoEquipamento.setBounds(35, 38, 130, 30);
 
-        jComboBox9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "monitores", "Gabinetes", "HD's", "Teclados", "Mouses" }));
-        jComboBox9.addActionListener(new java.awt.event.ActionListener() {
+        cmbTipoEquipamento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        cmbTipoEquipamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "monitores", "Gabinetes", "HD's", "Teclados", "Mouses" }));
+        cmbTipoEquipamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox9ActionPerformed(evt);
+                cmbTipoEquipamentoActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox9);
-        jComboBox9.setBounds(180, 40, 100, 23);
+        getContentPane().add(cmbTipoEquipamento);
+        cmbTipoEquipamento.setBounds(180, 40, 100, 23);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel3.setText("Modelo");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(35, 75, 130, 25);
+        lblModelo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lblModelo.setText("Modelo");
+        getContentPane().add(lblModelo);
+        lblModelo.setBounds(35, 75, 130, 25);
 
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel4.setText("Serial / Identificação");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(35, 114, 130, 25);
+        lblSerial.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lblSerial.setText("Serial / Identificação");
+        getContentPane().add(lblSerial);
+        lblSerial.setBounds(35, 114, 130, 25);
 
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel5.setText("Fabricante");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(35, 151, 130, 25);
+        lblFabricante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lblFabricante.setText("Fabricante");
+        getContentPane().add(lblFabricante);
+        lblFabricante.setBounds(35, 151, 130, 25);
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel6.setText("Data de cadastro");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(35, 188, 130, 25);
+        lblDataCadastro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lblDataCadastro.setText("Data de cadastro");
+        getContentPane().add(lblDataCadastro);
+        lblDataCadastro.setBounds(35, 188, 130, 25);
 
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(175, 188, 170, 25);
+        txtDataCadastro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtDataCadastro);
+        txtDataCadastro.setBounds(175, 188, 170, 25);
 
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(175, 74, 170, 25);
+        txtModelo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtModelo);
+        txtModelo.setBounds(175, 74, 170, 25);
 
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(175, 112, 170, 25);
+        txtSerial.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtSerial);
+        txtSerial.setBounds(175, 112, 170, 25);
 
-        jTextField4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(175, 151, 170, 25);
+        txtFabricante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtFabricante);
+        txtFabricante.setBounds(175, 151, 170, 25);
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel7.setText("Status (Manutenção / Em uso)");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(35, 225, 170, 35);
+        lblStatus.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        lblStatus.setText("Status (Manutenção / Em uso)");
+        getContentPane().add(lblStatus);
+        lblStatus.setBounds(35, 225, 170, 35);
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton1.setText(" Cadastrar Equipamento");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnCadastrarEquipamento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnCadastrarEquipamento.setText(" Cadastrar Equipamento");
+        btnCadastrarEquipamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnCadastrarEquipamentoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(350, 260, 170, 40);
+        getContentPane().add(btnCadastrarEquipamento);
+        btnCadastrarEquipamento.setBounds(350, 265, 170, 35);
 
-        btnEquipCad.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        btnEquipCad.setText("Equipamentos cadastrados");
-        btnEquipCad.addActionListener(new java.awt.event.ActionListener() {
+        btnEquipamentoCadastrado.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnEquipamentoCadastrado.setText("Equipamentos cadastrados");
+        btnEquipamentoCadastrado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEquipCadActionPerformed(evt);
+                btnEquipamentoCadastradoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEquipCad);
-        btnEquipCad.setBounds(350, 20, 187, 40);
+        getContentPane().add(btnEquipamentoCadastrado);
+        btnEquipamentoCadastrado.setBounds(350, 20, 187, 40);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manutenção", "em uso" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        cmbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manutenção", "em uso" }));
+        cmbStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                cmbStatusActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(215, 230, 100, 24);
+        getContentPane().add(cmbStatus);
+        cmbStatus.setBounds(215, 230, 100, 24);
+
+        btnLimpar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnLimpar.setText("Limpar");
+        getContentPane().add(btnLimpar);
+        btnLimpar.setBounds(35, 265, 100, 35);
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagem/aaa.png"))); // NOI18N
         getContentPane().add(Background);
@@ -151,24 +157,24 @@ public class TelaInicial extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox9ActionPerformed
+    private void cmbTipoEquipamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoEquipamentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox9ActionPerformed
+    }//GEN-LAST:event_cmbTipoEquipamentoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnCadastrarEquipamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarEquipamentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnCadastrarEquipamentoActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void cmbStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbStatusActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_cmbStatusActionPerformed
 
-    private void btnEquipCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipCadActionPerformed
+    private void btnEquipamentoCadastradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipamentoCadastradoActionPerformed
         TelaCadastrados tela;
         dispose();
         tela = new TelaCadastrados();
         tela.setVisible(true);
-    }//GEN-LAST:event_btnEquipCadActionPerformed
+    }//GEN-LAST:event_btnEquipamentoCadastradoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,21 +216,22 @@ public class TelaInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JButton btnEquipCad;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox9;
+    private javax.swing.JButton btnCadastrarEquipamento;
+    private javax.swing.JButton btnEquipamentoCadastrado;
+    private javax.swing.JButton btnLimpar;
+    private javax.swing.JComboBox<String> cmbStatus;
+    private javax.swing.JComboBox<String> cmbTipoEquipamento;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JLabel lblDataCadastro;
+    private javax.swing.JLabel lblFabricante;
+    private javax.swing.JLabel lblModelo;
+    private javax.swing.JLabel lblSerial;
+    private javax.swing.JLabel lblStatus;
+    private javax.swing.JLabel lblTipoEquipamento;
     private javax.swing.JLabel txtBemVindo;
+    private javax.swing.JTextField txtDataCadastro;
+    private javax.swing.JTextField txtFabricante;
+    private javax.swing.JTextField txtModelo;
+    private javax.swing.JTextField txtSerial;
     // End of variables declaration//GEN-END:variables
 }

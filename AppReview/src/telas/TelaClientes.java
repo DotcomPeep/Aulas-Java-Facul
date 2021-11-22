@@ -55,6 +55,7 @@ public class TelaClientes extends javax.swing.JFrame {
         btnExcluir = new javax.swing.JButton();
         btnAlterar = new javax.swing.JButton();
         btnSalvar = new javax.swing.JButton();
+        btnOutrasConsultas = new javax.swing.JButton();
 
         setTitle("Controle de clientes");
         getContentPane().setLayout(null);
@@ -194,7 +195,18 @@ public class TelaClientes extends javax.swing.JFrame {
         getContentPane().add(btnSalvar);
         btnSalvar.setBounds(10, 380, 90, 30);
 
-        setSize(new java.awt.Dimension(522, 476));
+        btnOutrasConsultas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnOutrasConsultas.setText("Mais consultas");
+        btnOutrasConsultas.setToolTipText("");
+        btnOutrasConsultas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOutrasConsultasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnOutrasConsultas);
+        btnOutrasConsultas.setBounds(510, 380, 117, 30);
+
+        setSize(new java.awt.Dimension(665, 476));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -381,6 +393,12 @@ public class TelaClientes extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnSalvarActionPerformed
 
+    private void btnOutrasConsultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOutrasConsultasActionPerformed
+        TelaConsultasClientes tela;
+        tela = new TelaConsultasClientes();
+        tela.setVisible(true);
+    }//GEN-LAST:event_btnOutrasConsultasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -421,6 +439,7 @@ public class TelaClientes extends javax.swing.JFrame {
     private javax.swing.JButton btnConsultar;
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnOutrasConsultas;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel lblBairro;
     private javax.swing.JLabel lblCidade;

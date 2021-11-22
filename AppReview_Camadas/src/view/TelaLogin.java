@@ -58,6 +58,11 @@ public class TelaLogin extends javax.swing.JFrame {
 
         txtUsuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtUsuario.setPreferredSize(new java.awt.Dimension(300, 30));
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtUsuario);
         txtUsuario.setBounds(10, 130, 300, 30);
 
@@ -175,6 +180,10 @@ public class TelaLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Erro de acesso ao Banco de Dados. \n Entre em contato com o administrador e informe o erro: " + ex.getMessage());
         }
     }//GEN-LAST:event_pswSenhaKeyPressed
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
